@@ -1,4 +1,4 @@
-const {boatInventory} = require('./fishingBoat');
+const {boatInventory} = require('./fishingBoat.js');
 
 
 // create a variable (todaysFish)that takes in boatInventory and creates new array
@@ -7,14 +7,15 @@ const {boatInventory} = require('./fishingBoat');
 //price is less than or equal to $7.50
 const mongerInventory = () =>{
     const todaysFish = boatInventory();
+    //console.log(todaysFish);
     const fishPurchases = [];
     for (const fish of todaysFish) {
         if (fish.price <= 7.50 && fish.amount >= 10) {
             fishPurchases.push(fish);
-            console.log(mongerInventory);
         }
-    
+        
     }
     return fishPurchases
 }
+console.log(mongerInventory());
 
