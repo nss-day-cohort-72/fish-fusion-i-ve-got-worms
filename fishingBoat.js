@@ -11,7 +11,6 @@ const fishData = [
 ]
 
 
-
 // declaring boatInventory function that returns the object of arrays
  const boatInventory = () => {
     return fishData
