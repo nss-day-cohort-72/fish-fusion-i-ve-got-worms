@@ -1,21 +1,26 @@
-const {boatInventory} = require('./fishingBoat.js');
+const { boatInventory } = require('./fishingBoat.js');
 
-
-// create a variable (todaysFish)that takes in boatInventory and creates new array
-//make a function that takes todaysFish  as a argument and returns a new array of objects.
-// So loop through todaysFish and create if statement that makes sure iterations quantity is more or equal to 10 and 
-//price is less than or equal to $7.50
-const mongerInventory = () =>{
+const mongerInventory = (maxPrice) => {
     const todaysFish = boatInventory();
-    //console.log(todaysFish);
     const fishPurchases = [];
+
     for (const fish of todaysFish) {
         if (fish.price <= 7.50 && fish.amount >= 10) {
-            fishPurchases.push(fish);
+            fishPurchases.push({
+                species: fish.species,
+                price: fish.price,
+                amount: 10 // Buy exactly 10 of each qualifying fish
+            });
         }
-        
     }
-    return fishPurchases
-}
-console.log(mongerInventory());
 
+    // Apply the chef's budget constraint
+    const chef = fishPurchases.filter(fish => fish.price <= maxPrice);
+    return chef;
+};
+
+//Chef price to input
+let result = mongerInventory(4.00)
+console.log (result)
+
+module.exports = { mongerInventory };
