@@ -10,7 +10,12 @@ const mongerInventory = (maxPrice) => {
         }
         
     }
-    return fishPurchases
+    
+    const chef = fishPurchases.filter(fish => fish.price <= maxPrice );
+
+    return chef;
 }
-console.log(mongerInventory());
+
+let result = mongerInventory(8.00);
+console.log(result);
 
