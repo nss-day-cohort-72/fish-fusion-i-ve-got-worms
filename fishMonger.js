@@ -17,5 +17,6 @@ const mongerInventory = () =>{
     }
     return fishPurchases
 }
-console.log(mongerInventory());
+
+module.exports = {mongerInventory};
 
