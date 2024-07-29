@@ -16,6 +16,4 @@ const mongerInventory = (maxPrice) => {
     return chef;
 }
 
-let result = mongerInventory(8.00);
-console.log(result);
-
+module.exports = { mongerInventory }
