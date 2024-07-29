@@ -15,6 +15,4 @@ const fishMenu = (maxPricePerFish) => {
   return menuHTML;
 };
 
-console.log(fishMenu(9.0));
-
 module.exports = { fishMenu };

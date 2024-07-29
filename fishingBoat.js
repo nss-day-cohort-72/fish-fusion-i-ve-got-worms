@@ -1,4 +1,4 @@
-// make database of fish with an array of objects fish data
+// variable fishData being declared as an array of objects
 const fishData = [
     { id: 1, species: "Halibut", weight: 6, price: 3.55, amount: 30 },
     { id: 2, species: "Mackerel", weight: 3, price: 4.10, amount: 48 },
@@ -12,8 +12,7 @@ const fishData = [
 
 
 
-//create a function that returns fish data boatinventory
-
+// declaring boatInventory function that returns the object of arrays
  const boatInventory = () => {
     return fishData
 }
