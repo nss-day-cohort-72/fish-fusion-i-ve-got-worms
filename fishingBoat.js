@@ -14,7 +14,8 @@ const fishData = [
 
 //create a function that returns fish data boatinventory
 
-export const boatInventory = () => {
+ const boatInventory = () => {
     return fishData
 }
-
+console.log(boatInventory());
+module.export = {boatInventory}
